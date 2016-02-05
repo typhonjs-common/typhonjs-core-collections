@@ -66,7 +66,7 @@
   
   <div class="description" data-ice="description"><p>Provides a multi-level Map implementation that mirrors the Map API except for exclusion of <code>forEach</code>.</p>
 <p>Each method takes a variable list of parameters. By not including any parameters when invoking methods of
-<code>MultiLevelMap</code> the base Map is the target. A list of comma separated parameters will index into the backing
+<code>MultiMap</code> the base Map is the target. A list of comma separated parameters will index into the backing
 multi-level map structure.</p>
 <p>Errors will be thrown for methods that require a minimum number of keys including:
 <code>delete(1), get(1), has(1), set(2)</code>. In particular set requires the actual value being set in addition to any
@@ -118,7 +118,7 @@ map.has(&apos;key1&apos;, &apos;key2&apos;); // is true.</code></pre>
       <div>
         
         
-        <div data-ice="description"><p>Initializes the MultiLevelMap</p>
+        <div data-ice="description"><p>Initializes the MultiMap</p>
 </div>
       </div>
     </td>
@@ -426,7 +426,7 @@ insertion order.</p>
   
   
   
-  <div data-ice="description"><p>Initializes the MultiLevelMap</p>
+  <div data-ice="description"><p>Initializes the MultiMap</p>
 </div>
 
   
@@ -472,7 +472,7 @@ insertion order.</p>
   
   
   <div data-ice="description"><p>The <code>clear()</code> method removes all elements from a Map object. If no keys are provided then the base map is cleared.
-Subsequent keys will attempt to index into additional levels of the MultiLevelMap.</p>
+Subsequent keys will attempt to index into additional levels of the MultiMap.</p>
 </div>
 
   
@@ -489,7 +489,7 @@ Subsequent keys will attempt to index into additional levels of the MultiLevelMa
       <td data-ice="name" data-depth="0">keys</td>
       <td data-ice="type"><span>*</span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"><p>A variable list of keys to index subsequent levels of the MultiLevelMap.</p>
+      <td data-ice="description"><p>A variable list of keys to index subsequent levels of the MultiMap.</p>
 </td>
     </tr>
 </tbody>
@@ -531,7 +531,7 @@ Subsequent keys will attempt to index into additional levels of the MultiLevelMa
   
   
   <div data-ice="description"><p>The <code>delete()</code> method removes the specified element from a Map object. If one key is provided then the base map
-is the target. Subsequent keys will attempt to index into additional levels of the MultiLevelMap.</p>
+is the target. Subsequent keys will attempt to index into additional levels of the MultiMap.</p>
 </div>
 
   
@@ -548,7 +548,7 @@ is the target. Subsequent keys will attempt to index into additional levels of t
       <td data-ice="name" data-depth="0">keys</td>
       <td data-ice="type"><span>*</span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"><p>A variable list of keys to index subsequent levels of the MultiLevelMap.</p>
+      <td data-ice="description"><p>A variable list of keys to index subsequent levels of the MultiMap.</p>
 </td>
     </tr>
 </tbody>
@@ -601,7 +601,7 @@ is the target. Subsequent keys will attempt to index into additional levels of t
   
   <div data-ice="description"><p>The <code>entries()</code> method returns a new Iterator object that contains the [key, value] pairs for each element in the
 Map object in insertion order. If one key is provided then the base map is the target. Subsequent keys will
-attempt to index into additional levels of the MultiLevelMap. If no Map is found then an empty iterator is
+attempt to index into additional levels of the MultiMap. If no Map is found then an empty iterator is
 returned.</p>
 </div>
 
@@ -619,7 +619,7 @@ returned.</p>
       <td data-ice="name" data-depth="0">keys</td>
       <td data-ice="type"><span>*</span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"><p>A variable list of keys to index subsequent levels of the MultiLevelMap.</p>
+      <td data-ice="description"><p>A variable list of keys to index subsequent levels of the MultiMap.</p>
 </td>
     </tr>
 </tbody>
@@ -672,7 +672,7 @@ returned.</p>
   
   
   <div data-ice="description"><p>The <code>get()</code> method returns a specified element from a Map object. If one key is provided then the base map is the
-target. Subsequent keys will attempt to index into additional levels of the MultiLevelMap. If no indexed Map is
+target. Subsequent keys will attempt to index into additional levels of the MultiMap. If no indexed Map is
 found then <code>undefined</code> is returned.</p>
 </div>
 
@@ -690,7 +690,7 @@ found then <code>undefined</code> is returned.</p>
       <td data-ice="name" data-depth="0">keys</td>
       <td data-ice="type"><span>*</span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"><p>A variable list of keys to index subsequent levels of the MultiLevelMap.</p>
+      <td data-ice="description"><p>A variable list of keys to index subsequent levels of the MultiMap.</p>
 </td>
     </tr>
 </tbody>
@@ -743,7 +743,7 @@ found then <code>undefined</code> is returned.</p>
   
   <div data-ice="description"><p>The <code>has()</code> method returns a boolean indicating whether an element with the specified key exists or not. If one
 key is provided then the base map is the target. Subsequent keys will attempt to index into additional levels of
-the MultiLevelMap. If no indexed Map is found then <code>false</code> is returned.</p>
+the MultiMap. If no indexed Map is found then <code>false</code> is returned.</p>
 </div>
 
   
@@ -760,7 +760,7 @@ the MultiLevelMap. If no indexed Map is found then <code>false</code> is returne
       <td data-ice="name" data-depth="0">keys</td>
       <td data-ice="type"><span>*</span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"><p>A variable list of keys to index subsequent levels of the MultiLevelMap.</p>
+      <td data-ice="description"><p>A variable list of keys to index subsequent levels of the MultiMap.</p>
 </td>
     </tr>
 </tbody>
@@ -813,7 +813,7 @@ the MultiLevelMap. If no indexed Map is found then <code>false</code> is returne
   
   <div data-ice="description"><p>The <code>isMap()</code> method returns a boolean indicating whether specified sequence of keys resolves to an existing Map.
 If one key is provided then the base map is the target. Subsequent keys will attempt to index into additional
-levels of the MultiLevelMap. If no indexed Map is found then <code>false</code> is returned.</p>
+levels of the MultiMap. If no indexed Map is found then <code>false</code> is returned.</p>
 </div>
 
   
@@ -830,7 +830,7 @@ levels of the MultiLevelMap. If no indexed Map is found then <code>false</code> 
       <td data-ice="name" data-depth="0">keys</td>
       <td data-ice="type"><span>*</span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"><p>A variable list of keys to index subsequent levels of the MultiLevelMap.</p>
+      <td data-ice="description"><p>A variable list of keys to index subsequent levels of the MultiMap.</p>
 </td>
     </tr>
 </tbody>
@@ -883,7 +883,7 @@ levels of the MultiLevelMap. If no indexed Map is found then <code>false</code> 
   
   <div data-ice="description"><p>The <code>keys()</code> method returns a new Iterator object that contains the keys for each element in the Map object in
 insertion order. If one key is provided then the base map is the target. Subsequent keys will attempt to index
-into additional levels of the MultiLevelMap. If no Map is found then an empty iterator is returned.</p>
+into additional levels of the MultiMap. If no Map is found then an empty iterator is returned.</p>
 </div>
 
   
@@ -900,7 +900,7 @@ into additional levels of the MultiLevelMap. If no Map is found then an empty it
       <td data-ice="name" data-depth="0">keys</td>
       <td data-ice="type"><span>*</span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"><p>A variable list of keys to index subsequent levels of the MultiLevelMap.</p>
+      <td data-ice="description"><p>A variable list of keys to index subsequent levels of the MultiMap.</p>
 </td>
     </tr>
 </tbody>
@@ -953,7 +953,7 @@ into additional levels of the MultiLevelMap. If no Map is found then an empty it
   
   
   <div data-ice="description"><p>The <code>set()</code> method adds a new element with a specified key and value to a Map object. If one key is provided then
-the base map is the target. Subsequent keys will attempt to index into additional levels of the MultiLevelMap.
+the base map is the target. Subsequent keys will attempt to index into additional levels of the MultiMap.
 New Maps are automatically created at each level for the given key parameters. The target Map that the value
 is added to is returned.</p>
 </div>
@@ -972,7 +972,7 @@ is added to is returned.</p>
       <td data-ice="name" data-depth="0">params</td>
       <td data-ice="type"><span>*</span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"><p>A variable list of keys to index subsequent levels of the MultiLevelMap with the last entry
+      <td data-ice="description"><p>A variable list of keys to index subsequent levels of the MultiMap with the last entry
                      being the value to be set / added.</p>
 </td>
     </tr>
@@ -1026,7 +1026,7 @@ is added to is returned.</p>
   
   <div data-ice="description"><p>The <code>size()</code> method returns an integer representing how many entries the Map object has. If no key is provided
 then the base map is the target. Subsequent keys will attempt to index into additional levels of the
-MultiLevelMap. If no indexed Map is found then <code>0</code> is returned.</p>
+MultiMap. If no indexed Map is found then <code>0</code> is returned.</p>
 </div>
 
   
@@ -1043,7 +1043,7 @@ MultiLevelMap. If no indexed Map is found then <code>0</code> is returned.</p>
       <td data-ice="name" data-depth="0">keys</td>
       <td data-ice="type"><span>*</span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"><p>A variable list of keys to index subsequent levels of the MultiLevelMap.</p>
+      <td data-ice="description"><p>A variable list of keys to index subsequent levels of the MultiMap.</p>
 </td>
     </tr>
 </tbody>
@@ -1096,7 +1096,7 @@ MultiLevelMap. If no indexed Map is found then <code>0</code> is returned.</p>
   
   <div data-ice="description"><p>The <code>values()</code> method returns a new Iterator object that contains the values for each element in the Map object in
 insertion order. If one key is provided then the base map is the target. Subsequent keys will attempt to index
-into additional levels of the MultiLevelMap. If no Map is found then an empty iterator is returned.</p>
+into additional levels of the MultiMap. If no Map is found then an empty iterator is returned.</p>
 </div>
 
   
@@ -1113,7 +1113,7 @@ into additional levels of the MultiLevelMap. If no Map is found then an empty it
       <td data-ice="name" data-depth="0">keys</td>
       <td data-ice="type"><span>*</span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"><p>A variable list of keys to index subsequent levels of the MultiLevelMap.</p>
+      <td data-ice="description"><p>A variable list of keys to index subsequent levels of the MultiMap.</p>
 </td>
     </tr>
 </tbody>
