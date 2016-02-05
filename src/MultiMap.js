@@ -23,7 +23,7 @@
 export default class MultiMap
 {
    /**
-    * Initializes the MultiLevelMap
+    * Initializes the MultiMap
     */
    constructor()
    {
