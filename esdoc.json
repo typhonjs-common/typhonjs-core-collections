@@ -1,0 +1,9 @@
+{
+   "title": "typhonjs-core-collections",
+   "source": "src",
+   "destination": "docs",
+   "manual":
+   {
+      "changelog": ["./CHANGELOG.md"]
+   }
+}
