@@ -2,7 +2,7 @@
  * Provides a multi-level Map implementation that mirrors the Map API except for exclusion of `forEach`.
  *
  * Each method takes a variable list of parameters. By not including any parameters when invoking methods of
- * `MultiLevelMap` the base Map is the target. A list of comma separated parameters will index into the backing
+ * `MultiMap` the base Map is the target. A list of comma separated parameters will index into the backing
  * multi-level map structure.
  *
  * Errors will be thrown for methods that require a minimum number of keys including:
@@ -33,9 +33,9 @@ export default class MultiMap
 
    /**
     * The `clear()` method removes all elements from a Map object. If no keys are provided then the base map is cleared.
-    * Subsequent keys will attempt to index into additional levels of the MultiLevelMap.
+    * Subsequent keys will attempt to index into additional levels of the MultiMap.
     *
-    * @param {*}  keys - A variable list of keys to index subsequent levels of the MultiLevelMap.
+    * @param {*}  keys - A variable list of keys to index subsequent levels of the MultiMap.
     *
     * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/clear
     */
@@ -59,9 +59,9 @@ export default class MultiMap
 
    /**
     * The `delete()` method removes the specified element from a Map object. If one key is provided then the base map
-    * is the target. Subsequent keys will attempt to index into additional levels of the MultiLevelMap.
+    * is the target. Subsequent keys will attempt to index into additional levels of the MultiMap.
     *
-    * @param {*}  keys - A variable list of keys to index subsequent levels of the MultiLevelMap.
+    * @param {*}  keys - A variable list of keys to index subsequent levels of the MultiMap.
     * @returns {boolean}
     *
     * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/delete
@@ -97,10 +97,10 @@ export default class MultiMap
    /**
     * The `entries()` method returns a new Iterator object that contains the [key, value] pairs for each element in the
     * Map object in insertion order. If one key is provided then the base map is the target. Subsequent keys will
-    * attempt to index into additional levels of the MultiLevelMap. If no Map is found then an empty iterator is
+    * attempt to index into additional levels of the MultiMap. If no Map is found then an empty iterator is
     * returned.
     *
-    * @param {*}  keys - A variable list of keys to index subsequent levels of the MultiLevelMap.
+    * @param {*}  keys - A variable list of keys to index subsequent levels of the MultiMap.
     * @returns {Iterator}
     *
     * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/entries
@@ -129,10 +129,10 @@ export default class MultiMap
 
    /**
     * The `get()` method returns a specified element from a Map object. If one key is provided then the base map is the
-    * target. Subsequent keys will attempt to index into additional levels of the MultiLevelMap. If no indexed Map is
+    * target. Subsequent keys will attempt to index into additional levels of the MultiMap. If no indexed Map is
     * found then `undefined` is returned.
     *
-    * @param {*}  keys - A variable list of keys to index subsequent levels of the MultiLevelMap.
+    * @param {*}  keys - A variable list of keys to index subsequent levels of the MultiMap.
     * @returns {*}
     *
     * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/get
@@ -169,9 +169,9 @@ export default class MultiMap
    /**
     * The `has()` method returns a boolean indicating whether an element with the specified key exists or not. If one
     * key is provided then the base map is the target. Subsequent keys will attempt to index into additional levels of
-    * the MultiLevelMap. If no indexed Map is found then `false` is returned.
+    * the MultiMap. If no indexed Map is found then `false` is returned.
     *
-    * @param {*}  keys - A variable list of keys to index subsequent levels of the MultiLevelMap.
+    * @param {*}  keys - A variable list of keys to index subsequent levels of the MultiMap.
     * @returns {boolean}
     *
     * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/has
@@ -208,9 +208,9 @@ export default class MultiMap
    /**
     * The `isMap()` method returns a boolean indicating whether specified sequence of keys resolves to an existing Map.
     * If one key is provided then the base map is the target. Subsequent keys will attempt to index into additional
-    * levels of the MultiLevelMap. If no indexed Map is found then `false` is returned.
+    * levels of the MultiMap. If no indexed Map is found then `false` is returned.
     *
-    * @param {*}  keys - A variable list of keys to index subsequent levels of the MultiLevelMap.
+    * @param {*}  keys - A variable list of keys to index subsequent levels of the MultiMap.
     * @returns {boolean}
     */
    isMap(...keys)
@@ -234,9 +234,9 @@ export default class MultiMap
    /**
     * The `keys()` method returns a new Iterator object that contains the keys for each element in the Map object in
     * insertion order. If one key is provided then the base map is the target. Subsequent keys will attempt to index
-    * into additional levels of the MultiLevelMap. If no Map is found then an empty iterator is returned.
+    * into additional levels of the MultiMap. If no Map is found then an empty iterator is returned.
     *
-    * @param {*}  keys - A variable list of keys to index subsequent levels of the MultiLevelMap.
+    * @param {*}  keys - A variable list of keys to index subsequent levels of the MultiMap.
     * @returns {Iterator}
     *
     * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/keys
@@ -265,11 +265,11 @@ export default class MultiMap
 
    /**
     * The `set()` method adds a new element with a specified key and value to a Map object. If one key is provided then
-    * the base map is the target. Subsequent keys will attempt to index into additional levels of the MultiLevelMap.
+    * the base map is the target. Subsequent keys will attempt to index into additional levels of the MultiMap.
     * New Maps are automatically created at each level for the given key parameters. The target Map that the value
     * is added to is returned.
     *
-    * @param {*}  params - A variable list of keys to index subsequent levels of the MultiLevelMap with the last entry
+    * @param {*}  params - A variable list of keys to index subsequent levels of the MultiMap with the last entry
     *                      being the value to be set / added.
     *
     * @returns {Map|undefined}
@@ -313,9 +313,9 @@ export default class MultiMap
    /**
     * The `size()` method returns an integer representing how many entries the Map object has. If no key is provided
     * then the base map is the target. Subsequent keys will attempt to index into additional levels of the
-    * MultiLevelMap. If no indexed Map is found then `0` is returned.
+    * MultiMap. If no indexed Map is found then `0` is returned.
     *
-    * @param {*}  keys - A variable list of keys to index subsequent levels of the MultiLevelMap.
+    * @param {*}  keys - A variable list of keys to index subsequent levels of the MultiMap.
     * @returns {number}
     */
    size(...keys)
@@ -343,9 +343,9 @@ export default class MultiMap
    /**
     * The `values()` method returns a new Iterator object that contains the values for each element in the Map object in
     * insertion order. If one key is provided then the base map is the target. Subsequent keys will attempt to index
-    * into additional levels of the MultiLevelMap. If no Map is found then an empty iterator is returned.
+    * into additional levels of the MultiMap. If no Map is found then an empty iterator is returned.
     *
-    * @param {*}  keys - A variable list of keys to index subsequent levels of the MultiLevelMap.
+    * @param {*}  keys - A variable list of keys to index subsequent levels of the MultiMap.
     * @returns {Iterator}
     *
     * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/values
