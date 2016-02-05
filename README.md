@@ -10,4 +10,4 @@
 
 Provides common collection oriented data structures for all TyphonJS repos:
 
-- MultiMap (A multi-level map)
+- MultiMap  (A multi-level map)
